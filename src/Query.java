@@ -109,13 +109,13 @@ public class Query
 	 */
 	public SolrDocumentList searchDocuments(String queryString) throws SolrServerException
 	{
-		SolrServer server = new HttpSolrServer(ExpertFinder.SOLR_URL + currentCore);
+	    SolrServer server = new HttpSolrServer(ExpertFinder.SOLR_URL + currentCore);
 	    SolrQuery query = new SolrQuery();
 	    query.setIncludeScore(true);
 	    query.setQuery(queryString);
 	    QueryResponse response = server.query( query );
-		SolrDocumentList docs = response.getResults();
-		return docs;
+	    SolrDocumentList docs = response.getResults();
+	    return docs;
 	}
 
 	/**
