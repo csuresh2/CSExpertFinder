@@ -39,6 +39,7 @@ public class CommandArguments
 	public CommandArguments(String[] arguments, SearchResult result) throws IOException
 	{
 		this.arguments = arguments;
+		this.result = result;
 		initializeDocumentsPath();
 		parseArguments();
 		identifyCommand();

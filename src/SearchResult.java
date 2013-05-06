@@ -17,10 +17,11 @@ public class SearchResult
 {
 	private StringBuffer resultString;
 	private String resultFilePath;
+	private static final int MAX_RESULT_BUFFER = 4084;
 
 	public SearchResult(String resultFilePath)
 	{
-		resultString = new StringBuffer(resultString);
+		resultString = new StringBuffer(MAX_RESULT_BUFFER);
 		this.resultFilePath = resultFilePath;
 	}
 
