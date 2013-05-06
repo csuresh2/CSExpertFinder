@@ -3,20 +3,23 @@ import java.io.IOException;
 import org.apache.solr.client.solrj.SolrServerException;
 
 /**
- * index all command
+ * Index all command
  * @author chethans
  */
 public class IndexAllCommand implements Command
 {
-	private Indexer indexer;
+	private PeopleDocuments peopleDocs;
+	private ConceptDocuments conceptDocs;
 
-	public IndexAllCommand(Indexer indexer)
+	public IndexAllCommand(PeopleDocuments peopleDocs, ConceptDocuments conceptDocs)
 	{
-		this.indexer = indexer;
+		this.peopleDocs = peopleDocs;
+		this.conceptDocs = conceptDocs;
 	}
 
 	public void execute() throws SolrServerException, IOException
 	{
-		indexer.indexAll();
+		peopleDocs.index();
+		conceptDocs.index();
 	}
 }

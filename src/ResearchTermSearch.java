@@ -7,15 +7,15 @@ import org.apache.solr.client.solrj.SolrServerException;
  */
 public class ResearchTermSearch implements Command
 {
-	private Searcher searcher;
+	private Query query;
 
-	public ResearchTermSearch(Searcher searcher)
+	public ResearchTermSearch(Query query)
 	{
-		this.searcher = searcher;
+		this.query = query;
 	}
 
 	public void execute() throws SolrServerException, IOException
 	{
-		searcher.researchTermSearch();
+		query.runSearch();
 	}
 }

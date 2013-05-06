@@ -7,15 +7,15 @@ import org.apache.solr.client.solrj.SolrServerException;
  */
 public class IndexPeopleCommand implements Command
 {
-	private Indexer indexer;
+	private PeopleDocuments docs;
 
-	public IndexPeopleCommand(Indexer indexer)
+	public IndexPeopleCommand(PeopleDocuments docs)
 	{
-		this.indexer = indexer;
+		this.docs = docs;
 	}
 
 	public void execute() throws SolrServerException, IOException
 	{
-		indexer.indexPeople();
+		docs.index();
 	}
 }

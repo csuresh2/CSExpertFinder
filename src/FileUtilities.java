@@ -76,7 +76,7 @@ public class FileUtilities
 	 */
 	public static String[] getFieldListFromTabularData(File file, int field_number) throws IOException
 	{
-		String[] fieldValues = new String[CSExpertSearch.MAX_CONCEPT_QUERIES];
+		String[] fieldValues = new String[ExpertFinder.MAX_CONCEPT_QUERIES];
 		//create BufferedReader to concept file
 		BufferedReader br = new BufferedReader(new FileReader(file));
 		String line = "";
@@ -85,7 +85,7 @@ public class FileUtilities
 		int tokenNumber = 0;
 
 		//read space separated file line by line
-		while ((line = br.readLine()) != null && lineNumber < CSExpertSearch.MAX_CONCEPT_QUERIES)
+		while ((line = br.readLine()) != null && lineNumber < ExpertFinder.MAX_CONCEPT_QUERIES)
 		{
 			lineNumber++;
 

@@ -8,15 +8,15 @@ import org.apache.solr.client.solrj.SolrServerException;
 
 public class ResearchConceptSearch implements Command
 {
-	private Searcher searcher;
+	private Query query;
 
-	public ResearchConceptSearch(Searcher searcher)
+	public ResearchConceptSearch(Query query)
 	{
-		this.searcher = searcher;
+		this.query = query;
 	}
 
 	public void execute() throws SolrServerException, IOException
 	{
-		searcher.researchConceptSearch();
+		query.runSearch();
 	}
 }

@@ -8,15 +8,15 @@ import org.apache.solr.client.solrj.SolrServerException;
  */
 public class IndexConceptsCommand implements Command
 {
-	private Indexer indexer;
+	private ConceptDocuments docs;
 
-	public IndexConceptsCommand(Indexer indexer)
+	public IndexConceptsCommand(ConceptDocuments docs)
 	{
-		this.indexer = indexer;
+		this.docs = docs;
 	}
 
 	public void execute() throws SolrServerException, IOException
 	{
-		indexer.indexConcepts();
+		docs.index();
 	}
 }

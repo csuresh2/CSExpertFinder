@@ -46,7 +46,7 @@ JC = javac
 vpath %.java $(SRC_DIR)/
 vpath %.class $(BIN_DIR)/
 CLASSES = \
-	ExpertFinder.java
+	CSExpertSearch.java
 #
 # the default make target entry
 #
